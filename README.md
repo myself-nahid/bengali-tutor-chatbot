@@ -20,3 +20,27 @@ Key innovation: It combines **RAG**, **long-term memory**, and **agentic decisio
 - ✅ **Scalable API Backend (FastAPI):** Decoupled architecture for **independent scaling of frontend and backend**.  
 
 ---
+
+## **📐 System Architecture**
+```
++--------------+      +------------------+      +---------------------+
+|  Streamlit   | <--> |   FastAPI API    | <--> |   LangGraph Agent    |
+|   (UI)       |      |  (main.py)       |      |  (agent_graph.py)    |
++--------------+      +------------------+      +----------+----------+
+                                                          |
+                                           +--------------+--------------+
+                                           |                             |
+                                   [Is context relevant?]               |
+                                           |                             |
+                                     (Routing Node)                      |
+                                           |                             |
+                     +----------------------+----------------------+     
+                     |                                             |
+                  (Yes)                                         (No)
+                     |                                             |
++-------------------+      +-------------------+      +-------------------+
+| Pinecone          | <--> | Retrieve Node     |      | Web Search Node   |
+| (Vector DB)       |      | (RAG Context)     |      | (Fallback)        |
++-------------------+      +-------------------+      +-------------------+
+```
+

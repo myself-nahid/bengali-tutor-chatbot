@@ -213,24 +213,23 @@ The perfect scores on this test set validate the high effectiveness of the syste
 ---
 ## **📂 Project Structure**
 ```
-bengali-tutor-chatbot/                 
-├── notebooks/              # Jupyter notebooks for experiments                 
-    ├── 01-RAG/                  
-            ├── books/            
-                ├── english-docs.txt
-                ├── book-data.txt
-            ├── simple-rag.ipynb
-        02-RAG-Memory-LabgGraph/                  
-            ├── rag-memory.ipynb
-        03-Agentic-RAG-Long-Term-Memory/                  
-            ├── agentic-rag-ltm.ipynb    
-├── src/                    # Application source code                 
-    ├── app/                  
-        ├── agent_graph.py
-        ├── config.py
-        └── main.py
-        └── schemas.py
-    ├── streamlit_app.py
+bengali-tutor-chatbot/
+├── notebooks/              # Jupyter notebooks for experiments
+│   ├── 01-RAG/
+│   │   ├── books/
+│   │   │   ├── HSC26-Bangla1st-Paper.pdf
+│   │   ├── simple-rag.ipynb
+│   ├── 02-RAG-Memory-LangGraph/
+│   │   ├── rag-memory.ipynb
+│   ├── 03-Agentic-RAG-Long-Term-Memory/
+│   │   ├── agentic-rag-ltm.ipynb
+├── src/                    # Application source code
+│   ├── app/
+│   │   ├── agent_graph.py
+│   │   ├── config.py
+│   │   ├── main.py
+│   │   ├── schemas.py
+│   ├── streamlit_app.py
 ├── .env                    # Environment variables (API keys)
 ├── requirements.txt        # Python dependencies
 ├── README.md               # Project documentation
@@ -247,9 +246,7 @@ bengali-tutor-chatbot/
 - [ ] Mobile-friendly UI  
 
 ---
-
----
-## **Answering Key Design Questions**
+## **❓Answering Key Design Questions**
 
 ## 1. Text Extraction Method and Challenges
 

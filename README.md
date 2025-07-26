@@ -114,3 +114,47 @@ PINECONE_INDEX_NAME="10ms-db-bangla-book"
 EMBEDDING_MODEL_NAME="sentence-transformers/all-mpnet-base-v2"
 ```
 
+---
+
+## **▶ Running the Application**
+### **Phase 1: Data Ingestion (One-Time)**
+1. Prepare `english-docs.txt` and `book-data.txt` inside `Bangla-Book` folder.  
+2. Run:
+```bash
+jupyter notebook
+# Open and run `vanilla-rag.ipynb` to create embeddings & upload to Pinecone
+```
+
+---
+
+### **Phase 2: Start the Web App**
+Run **two terminals**:
+
+**Terminal 1: Start FastAPI Backend**
+```bash
+uvicorn main:app --host 127.0.0.1 --port 8000 --reload
+```
+
+**Terminal 2: Start Streamlit Frontend**
+```bash
+streamlit run streamlit_app.py
+```
+
+Access UI: **http://localhost:8501**
+
+---
+
+## **📸 Screenshots**
+add it later
+
+---
+
+## **✅ Features Roadmap**
+- [x] Core RAG pipeline  
+- [x] Long-term memory  
+- [x] Web search fallback  
+- [ ] Multi-user memory storage (Redis / DB)  
+- [ ] Speech-enabled interface  
+- [ ] Mobile-friendly UI  
+
+---

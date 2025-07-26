@@ -122,7 +122,7 @@ EMBEDDING_MODEL_NAME="sentence-transformers/all-mpnet-base-v2"
 2. Run:
 ```bash
 jupyter notebook
-# Open and run `vanilla-rag.ipynb` to create embeddings & upload to Pinecone
+# Open and run `simple-rag.ipynb` to create embeddings & upload to Pinecone
 ```
 
 ---
@@ -132,11 +132,13 @@ Run **two terminals**:
 
 **Terminal 1: Start FastAPI Backend**
 ```bash
+cd src
 uvicorn main:app --host 127.0.0.1 --port 8000 --reload
 ```
 
 **Terminal 2: Start Streamlit Frontend**
 ```bash
+cd src
 streamlit run streamlit_app.py
 ```
 
@@ -146,6 +148,31 @@ Access UI: **http://localhost:8501**
 
 ## **📸 Screenshots**
 add it later
+
+## **📂 Project Structure**
+```
+bengali-tutor-chatbot/                 
+├── notebooks/              # Jupyter notebooks for experiments                 
+    ├── 01-RAG/                  
+            ├── books/            
+                ├── english-docs.txt
+                ├── book-data.txt
+            ├── simple-rag.ipynb
+        02-RAG-Memory-LabgGraph/                  
+            ├── rag-memory.ipynb
+        03-Agentic-RAG-Long-Term-Memory/                  
+            ├── agentic-rag-ltm.ipynb    
+├── src/                    # Application source code                 
+    ├── app/                  
+        ├── agent_graph.py
+        ├── config.py
+        └── main.py
+        └── schemas.py
+    ├── streamlit_app.py
+├── .env                    # Environment variables (API keys)
+├── requirements.txt        # Python dependencies
+├── README.md               # Project documentation
+```
 
 ---
 

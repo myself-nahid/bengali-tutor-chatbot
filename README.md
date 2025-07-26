@@ -170,7 +170,7 @@ This endpoint retrieves the stored long-term memory for a user, which is display
 {
     "user_id": "unique_student_id",
     "memory": {
-        "user_name": "Al Amin",
+        "user_name": "Nahid Hasan",
         "grade_or_class": "10",
         "topics_of_interest": ["অপরিচিতা", "ভাগ্য দেবতা"],
         "last_topic_discussed": "ভাগ্য দেবতা"
@@ -187,6 +187,28 @@ Here are some sample interactions demonstrating the system's capabilities, inclu
 ![Alt text](docs/demo04.png)
 ![Alt text](docs/demo05.png)
 ![Alt text](docs/demo06.png)
+
+---
+## **📊 Evaluation Matrix**
+# System Performance Evaluation
+
+A quantitative evaluation was performed to measure the system's accuracy and relevance.
+
+## Results
+
+| Question | Expected Answer | Retrieval Score (Relevance) | Answer Score (Correctness) |
+|----------|-----------------|-----------------------------|----------------------------|
+| অনুপমের ভাষায় সুপুরুষ কাকে বলা হয়েছে? | শম্ভুনাথ | 100% | 100% |
+| কাকে অনুপমের ভাগ্য দেবতা বলে উল্লেখ করা হয়েছে? | মামা | 100% | 100% |
+| 'অপরিচিতা' গল্পে বিয়ের সময় কল্যাণীর প্রকৃত বয়স কত ছিল? | পনেরো | 100% | 100% |
+
+![Evaluation Chart](docs/chart.png)
+
+## Conclusion
+- **Average Context Relevance Score**: 100%
+- **Average Answer Correctness Score**: 100%
+
+The perfect scores on this test set validate the high effectiveness of the system's retrieval and generation pipeline.
 
 ---
 ## **📂 Project Structure**

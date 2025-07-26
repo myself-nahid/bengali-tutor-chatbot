@@ -147,7 +147,14 @@ Access UI: **http://localhost:8501**
 ---
 
 ## **📸 Screenshots**
-add it later
+Here are some sample interactions demonstrating the system's capabilities, including its long-term memory.
+
+![Alt text](docs/demo01.png)
+![Alt text](docs/demo02.png)
+![Alt text](docs/demo03.png)
+![Alt text](docs/demo04.png)
+![Alt text](docs/demo05.png)
+![Alt text](docs/demo06.png)
 
 ## **📂 Project Structure**
 ```

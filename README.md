@@ -118,7 +118,7 @@ EMBEDDING_MODEL_NAME="sentence-transformers/all-mpnet-base-v2"
 
 ## **▶ Running the Application**
 ### **Phase 1: Data Ingestion (One-Time)**
-1. Prepare `english-docs.txt` and `book-data.txt` inside `Bangla-Book` folder.  
+1. Prepare `pdf file` inside `books` folder.  
 2. Run:
 ```bash
 jupyter notebook
@@ -145,7 +145,39 @@ streamlit run streamlit_app.py
 Access UI: **http://localhost:8501**
 
 ---
-
+## **📝 API Documentation**
+The FastAPI backend provides two main endpoints.
+1. Chat Endpoint This is the main endpoint for interacting with the agent. Endpoint: POST /chat Request Body:
+```
+{
+  "query": "Enter your Question Hare.....",
+  "user_id": "unique_student_id",
+  "thread_id": "unique_session_id"
+}
+```
+Success Response (200 OK):
+```
+{
+  "response": "এজেন্টের তৈরি করা উত্তর এখানে থাকবে। / Agent response is There"
+}
+```
+2. Long Term or Cross Thread Memory Endpoint
+This endpoint retrieves the stored long-term memory for a user, which is displayed in the Streamlit app's sidebar.
+- Endpoint: GET /memory/{user_id}
+- Path Parameter: user_id (string) - The unique ID of the user.
+- Success Response (200 OK):
+```
+{
+    "user_id": "unique_student_id",
+    "memory": {
+        "user_name": "Al Amin",
+        "grade_or_class": "10",
+        "topics_of_interest": ["অপরিচিতা", "ভাগ্য দেবতা"],
+        "last_topic_discussed": "ভাগ্য দেবতা"
+    }
+}
+```
+---
 ## **📸 Screenshots**
 Here are some sample interactions demonstrating the system's capabilities, including its long-term memory.
 
@@ -156,6 +188,7 @@ Here are some sample interactions demonstrating the system's capabilities, inclu
 ![Alt text](docs/demo05.png)
 ![Alt text](docs/demo06.png)
 
+---
 ## **📂 Project Structure**
 ```
 bengali-tutor-chatbot/                 

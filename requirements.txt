@@ -28,3 +28,4 @@ requests
 ipython
 langchain-tavily
 wikipedia
+pypdf
